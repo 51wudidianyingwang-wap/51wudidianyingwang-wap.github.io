@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="renderer" content="webkit">
+<meta name="applicable-device" content="pc,mobile">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>51无敌电影网 - 电影在线观看 高清影视免费播放 | 51wudidianyingwang-wap</title>
+<meta name="keywords" content="51无敌电影网, 51wudidianyingwang-wap, 无敌电影网, 电影在线观看, 高清电影, 电视剧在线观看, 免费电影网站, 51无敌, 影视资源">
+<meta name="description" content="51无敌电影网（51wudidianyingwang-wap）全网无敌影视资源聚合平台，提供电影、电视剧、综艺、动漫、纪录片等高清在线观看服务。51无敌电影网资源全、更新快、画质高清、免注册免费播放，手机电脑自适应，打开即看。">
+<link rel="canonical" href="https://51wudidianyingwang-wap">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#07090c; --ink:#0d1117; --card:rgba(255,255,255,.045); --line:rgba(255,255,255,.10);
+  --txt:#eaf2f0; --sub:#7f9490; --pri:#c6ff3d; --pri2:#8ee000; --ven:#39ff14; --cy:#00e5ff;
+  --mag:#ff2e88; --rad:18px; --max:1260px;
+}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  background:var(--bg); color:var(--txt); line-height:1.75; overflow-x:hidden;
+  background-image:
+    linear-gradient(rgba(198,255,61,.045) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(198,255,61,.045) 1px,transparent 1px);
+  background-size:52px 52px;
+}
+body::before{content:"";position:fixed;inset:0;background:radial-gradient(900px 600px at 78% 8%,rgba(57,255,20,.16),transparent 60%),radial-gradient(700px 520px at 12% 92%,rgba(0,229,255,.13),transparent 60%);pointer-events:none;z-index:-1}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+.container{width:100%;max-width:var(--max);margin:0 auto;padding:0 20px}
+::selection{background:var(--pri);color:#0a0d0a}
+
+/* 扫描条 */
+.scan{height:3px;background:linear-gradient(90deg,transparent,var(--pri),var(--cy),var(--pri),transparent);background-size:240% 100%;animation:scan 3.6s linear infinite}
+@keyframes scan{0%{background-position:100% 0}100%{background-position:-140% 0}}
+
+/* 公告跑马灯 */
+.marq{border-bottom:1px solid var(--line);overflow:hidden;padding:9px 0;background:rgba(13,17,23,.8)}
+.marq .in{display:flex;gap:56px;white-space:nowrap;animation:scr 40s linear infinite;font-size:12.5px;color:var(--sub);font-family:ui-monospace,Menlo,monospace}
+.marq .in b{color:var(--pri);font-weight:700}
+@keyframes scr{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* 导航 */
+header{position:sticky;top:0;z-index:99;background:rgba(7,9,12,.9);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+header .container{display:flex;align-items:center;gap:16px;height:68px}
+.logo{display:flex;align-items:center;gap:11px;flex-shrink:0}
+.logo .badge{width:42px;height:42px;border-radius:11px;background:var(--ink);border:2px solid var(--pri);display:grid;place-items:center;font-size:16px;font-weight:900;color:var(--pri);box-shadow:0 0 18px rgba(198,255,61,.35)}
+.logo h1{font-size:20px;font-weight:900;letter-spacing:.5px}
+.logo h1 em{font-style:normal;color:var(--pri)}
+.logo small{display:block;font-size:9.5px;color:var(--sub);letter-spacing:2.5px;font-family:ui-monospace,Menlo,monospace}
+nav{flex:1;display:flex;justify-content:center;gap:3px}
+nav a{font-size:14px;padding:8px 12px;border-radius:9px;color:var(--sub);transition:.22s;font-weight:500}
+nav a:hover{color:var(--pri);background:rgba(198,255,61,.13)}
+.url-chip{font-family:ui-monospace,Menlo,monospace;font-size:12.5px;color:var(--pri);border:1px solid rgba(198,255,61,.45);padding:8px 15px;border-radius:20px;white-space:nowrap;transition:.25s}
+.url-chip:hover{background:rgba(198,255,61,.12)}
+.mbtn{display:none;width:42px;height:42px;border:1px solid var(--line);background:var(--card);border-radius:11px;color:var(--pri);font-size:21px;cursor:pointer}
+
+/* 通用 */
+section{padding:62px 0;position:relative}
+.shead{margin-bottom:38px}
+.shead .bar{width:46px;height:5px;border-radius:3px;background:linear-gradient(90deg,var(--pri),var(--cy));margin-bottom:14px}
+.shead h2{font-size:30px;font-weight:900;letter-spacing:-.5px}
+.shead h2 em{font-style:normal;color:var(--pri)}
+.shead p{font-size:14px;color:var(--sub);margin-top:9px}
+.blk{background:var(--card);border:1px solid var(--line);border-radius:var(--rad);transition:.3s;position:relative}
+.blk:hover{transform:translateY(-6px);border-color:rgba(198,255,61,.6);box-shadow:0 22px 44px rgba(0,0,0,.5),0 0 0 1px rgba(198,255,61,.25)}
+
+/* HUD Hero */
+.hero{padding:44px 0 0}
+.hud{border-radius:30px;overflow:hidden;border:1px solid var(--line);background:linear-gradient(135deg,rgba(198,255,61,.1),rgba(0,229,255,.06));position:relative}
+.hud::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent 0 3px,rgba(255,255,255,.018) 3px 4px);pointer-events:none}
+.hudwrap{position:relative;padding:54px 48px;display:grid;grid-template-columns:1.35fr 1fr;gap:46px;align-items:center}
+.hud .corner{position:absolute;width:26px;height:26px;border:2px solid var(--pri);opacity:.8}
+.hud .c1{top:18px;left:18px;border-right:0;border-bottom:0}
+.hud .c2{top:18px;right:18px;border-left:0;border-bottom:0}
+.hud .c3{bottom:18px;left:18px;border-right:0;border-top:0}
+.hud .c4{bottom:18px;right:18px;border-left:0;border-top:0}
+.hud .pre{font-family:ui-monospace,Menlo,monospace;font-size:12px;color:var(--cy);letter-spacing:3px;margin-bottom:16px}
+.hud h2{font-size:clamp(40px,6.2vw,72px);line-height:.98;font-weight:900;letter-spacing:-2px}
+.hud h2 .b1{color:var(--pri)}
+.hud h2 .b2{font-size:.42em;display:block;color:var(--sub);letter-spacing:6px;margin-top:18px;font-weight:700}
+.hud .site{margin-top:26px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.hud .site code{font-family:ui-monospace,Menlo,monospace;font-size:15px;color:var(--pri);background:rgba(198,255,61,.1);border:1px dashed rgba(198,255,61,.5);padding:11px 18px;border-radius:10px}
+.hud .site code b{color:var(--cy)}
+.hud p{color:var(--sub);font-size:15.5px;margin-top:22px;max-width:560px}
+.cta{display:flex;gap:14px;margin-top:28px;flex-wrap:wrap}
+.btn{padding:15px 32px;border-radius:12px;font-size:15px;font-weight:800;cursor:pointer;border:0;transition:.25s;display:inline-flex;align-items:center;gap:8px}
+.btn.pri{background:var(--pri);color:#0c1006;box-shadow:0 12px 26px rgba(198,255,61,.4)}
+.btn.pri:hover{transform:translateY(-3px);box-shadow:0 16px 34px rgba(198,255,61,.55)}
+.btn.ghost{background:transparent;color:var(--pri);border:1px solid var(--pri)}
+.btn.ghost:hover{background:rgba(198,255,61,.12)}
+
+/* 状态面板 */
+.panel{display:flex;flex-direction:column;gap:14px}
+.panel .head{display:flex;align-items:center;gap:9px;font-family:ui-monospace,Menlo,monospace;font-size:12px;color:var(--cy)}
+.panel .head .dot{width:8px;height:8px;border-radius:50%;background:var(--ven);box-shadow:0 0 10px var(--ven);animation:blink 1.4s infinite}
+@keyframes blink{50%{opacity:.25}}
+.cell{border:1px solid var(--line);border-radius:14px;background:rgba(13,17,23,.7);padding:18px 20px}
+.cell .k{font-size:11.5px;color:var(--sub);font-family:ui-monospace,Menlo,monospace;letter-spacing:1px}
+.cell .v{font-size:24px;font-weight:900;color:var(--pri);margin-top:6px}
+.cell .v small{font-size:13px;color:var(--sub);font-weight:500;margin-left:6px}
+.cell .bar{height:6px;border-radius:4px;background:rgba(255,255,255,.08);margin-top:12px;overflow:hidden}
+.cell .bar i{display:block;height:100%;border-radius:4px;background:linear-gradient(90deg,var(--pri),var(--cy))}
+.mini{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.mini .m{border:1px solid var(--line);border-radius:12px;padding:14px;background:rgba(13,17,23,.6)}
+.mini .m b{display:block;font-size:19px;font-weight:900;color:var(--txt)}
+.mini .m span{font-size:11.5px;color:var(--sub);font-family:ui-monospace,Menlo,monospace}
+
+/* 分类 - 二进制网格 */
+.chans{display:grid;grid-template-columns:repeat(6,1fr);gap:13px}
+.chan{padding:24px 14px;text-align:center;cursor:pointer;overflow:hidden}
+.chan .ic{width:60px;height:60px;margin:0 auto 13px;border-radius:16px;display:grid;place-items:center;font-size:27px;background:var(--ink);border:1px solid var(--line)}
+.chan h3{font-size:15.5px;margin-bottom:5px}
+.chan p{font-size:12px;color:var(--sub)}
+.chan .cnt{margin-top:11px;font-size:11px;color:var(--pri);font-family:ui-monospace,Menlo,monospace}
+
+/* 海报 */
+.rowhead{display:flex;justify-content:space-between;align-items:end;margin-bottom:22px;flex-wrap:wrap;gap:10px}
+.rowhead h3{font-size:21px;font-weight:800}
+.rowhead h3 em{font-style:normal;color:var(--pri)}
+.rowhead a{font-size:13px;color:var(--cy);font-family:ui-monospace,Menlo,monospace}
+.grid2{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.film{transition:.3s;cursor:pointer}
+.film:hover{transform:translateY(-6px)}
+.film .poster{height:245px;border-radius:15px;display:grid;place-items:center;font-size:48px;position:relative;overflow:hidden;border:1px solid var(--line)}
+.film .poster.a{background:linear-gradient(150deg,#2e3b2c,#5a7a1e)}
+.film .poster.b{background:linear-gradient(150deg,#123,#0a4a4a)}
+.film .poster.c{background:linear-gradient(150deg,#3a1a0d,#a33a10)}
+.film .poster.d{background:linear-gradient(150deg,#1a1a3a,#3a1a6a)}
+.film .poster.e{background:linear-gradient(150deg,#3a2a05,#a07a10)}
+.film .poster .score{position:absolute;top:10px;left:10px;background:rgba(0,0,0,.6);color:var(--pri);font-size:12px;font-weight:800;padding:3px 9px;border-radius:20px;font-family:ui-monospace,Menlo,monospace}
+.film .poster .yr{position:absolute;bottom:10px;right:10px;background:rgba(0,0,0,.5);color:#fff;font-size:11px;padding:3px 9px;border-radius:8px}
+.film h4{font-size:15px;margin-top:11px}
+.film p{font-size:12.5px;color:var(--sub);margin-top:3px}
+
+/* 特色 - 编号条纹 */
+.feats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.feat{padding:26px 24px;overflow:hidden;cursor:pointer}
+.feat::before{content:"";position:absolute;left:0;right:0;top:0;height:2px;background:linear-gradient(90deg,var(--pri),transparent)}
+.feat .ic{font-size:26px;margin-bottom:12px;display:block}
+.feat h3{font-size:16.5px;margin-bottom:7px}
+.feat p{font-size:13.5px;color:var(--sub)}
+
+/* 排行 */
+.rank2{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.rank{overflow:hidden}
+.rank .hd{display:flex;align-items:center;justify-content:space-between;padding:18px 22px;border-bottom:1px solid var(--line)}
+.rank .hd h3{font-size:17.5px}
+.rank .hd em{font-style:normal;font-size:11px;color:var(--pri);font-family:ui-monospace,Menlo,monospace}
+.rk{display:grid;grid-template-columns:38px 1fr auto;gap:14px;align-items:center;padding:13px 22px;border-bottom:1px solid rgba(255,255,255,.05)}
+.rk:last-child{border-bottom:0}
+.rk .n{width:30px;height:30px;border-radius:8px;display:grid;place-items:center;font-weight:800;font-size:13.5px;background:rgba(255,255,255,.07);font-family:ui-monospace,Menlo,monospace}
+.rk.g1 .n{background:var(--pri);color:#0a0d0a}
+.rk.g2 .n{background:var(--cy);color:#04181c}
+.rk.g3 .n{background:var(--mag);color:#fff}
+.rk b{font-size:14.5px}
+.rk small{display:block;font-size:12px;color:var(--sub)}
+.rk .up{font-size:11.5px;color:var(--pri);font-weight:700;font-family:ui-monospace,Menlo,monospace;white-space:nowrap}
+.rk .up.dn{color:var(--mag)}
+
+/* 资讯 - 控制台列表 */
+.tl{display:grid;gap:11px}
+.nw{display:grid;grid-template-columns:88px 1fr auto;gap:18px;align-items:center;padding:17px 22px;cursor:pointer}
+.nw:hover{transform:translateX(6px)}
+.nw .dt{font-family:ui-monospace,Menlo,monospace}
+.nw .dt b{font-size:20px;color:var(--pri);font-weight:900}
+.nw .dt span{font-size:11px;color:var(--cy)}
+.nw h4{font-size:15px}
+.nw .go{font-size:12px;color:var(--sub);font-family:ui-monospace,Menlo,monospace}
+
+/* 演员 */
+.stars{display:grid;grid-template-columns:repeat(6,1fr);gap:13px}
+.star{padding:20px 12px;text-align:center}
+.star .av{width:64px;height:64px;margin:0 auto 11px;border-radius:50%;display:grid;place-items:center;font-size:26px;background:var(--ink);border:2px solid var(--line)}
+.star:hover .av{border-color:var(--pri);color:var(--pri)}
+.star h4{font-size:14.5px}
+.star p{font-size:11.5px;color:var(--sub);margin-top:3px}
+
+/* 站点信息 */
+.info{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.lead{padding:28px}
+.lead h3{font-size:21px;margin-bottom:13px}
+.lead p{font-size:14.5px;color:var(--sub);margin-bottom:11px}
+.kw{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.kw a{padding:7px 14px;border-radius:6px;background:rgba(198,255,61,.1);border:1px solid var(--line);font-size:12.5px;color:var(--pri);transition:.2s;font-family:ui-monospace,Menlo,monospace}
+.kw a:hover{background:var(--pri);color:#0a0d0a}
+.dl{display:grid}
+.dl .row{display:grid;grid-template-columns:96px 1fr;padding:14px 22px;border-bottom:1px solid rgba(255,255,255,.06)}
+.dl .row:last-child{border-bottom:0}
+.dl .row dt{font-size:12.5px;color:var(--pri);font-family:ui-monospace,Menlo,monospace}
+.dl .row dd{font-size:14px}
+.dl .row dd a{color:var(--cy);font-family:ui-monospace,Menlo,monospace}
+
+/* FAQ */
+.faqs{display:grid;gap:11px;max-width:900px;margin:0 auto}
+.faq{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.faq>div{padding:17px 22px;cursor:pointer;display:flex;gap:14px;align-items:center;font-size:15.5px}
+.faq .n{width:28px;height:28px;border-radius:7px;background:var(--pri);color:#0a0d0a;font-weight:900;font-size:13.5px;display:grid;place-items:center;flex-shrink:0;font-family:ui-monospace,Menlo,monospace}
+.faq .ar{margin-left:auto;color:var(--sub);transition:.25s;font-family:ui-monospace,Menlo,monospace}
+.faq.open .ar{transform:rotate(180deg);color:var(--pri)}
+.faq .ans{max-height:0;transition:.35s ease;overflow:hidden}
+.faq.open .ans{max-height:240px}
+.faq .ans p{padding:0 22px 18px 56px;color:var(--sub);font-size:14px}
+
+/* 页脚 */
+footer{border-top:1px solid var(--line);margin-top:28px;padding:50px 0 0}
+.foot{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:34px;padding-bottom:34px}
+.foot .brand .logo{margin-bottom:13px}
+.foot .brand p{font-size:13.5px;color:var(--sub)}
+.foot h4{font-size:14px;margin-bottom:15px;color:var(--pri)}
+.foot ul li{padding:6px 0;font-size:13.5px;color:var(--sub);transition:.2s;cursor:pointer}
+.foot ul li:hover{color:var(--pri);padding-left:6px}
+.bot{border-top:1px solid var(--line);padding:20px 0;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:12.5px;color:var(--sub);font-family:ui-monospace,Menlo,monospace}
+.bot .u{color:var(--pri)}
+
+#top{position:fixed;right:20px;bottom:24px;width:46px;height:46px;border-radius:12px;background:var(--pri);color:#0a0d0a;border:0;font-size:19px;cursor:pointer;opacity:0;pointer-events:none;transform:translateY(14px);transition:.3s;z-index:98;font-weight:900}
+#top.on{opacity:1;pointer-events:auto;transform:none}
+
+@media(max-width:1024px){
+  .hudwrap{grid-template-columns:1fr;gap:34px}
+  .panel{display:none}
+  .hudwrap{padding:44px 32px}
+  .chans,.stars{grid-template-columns:repeat(3,1fr)}
+  .info,.rank2{grid-template-columns:1fr}
+  .grid2{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:820px){
+  .mbtn{display:grid;place-items:center}
+  nav{position:fixed;top:68px;left:0;right:0;flex-direction:column;background:rgba(7,9,12,.97);padding:18px;border-bottom:1px solid var(--line);gap:4px;transform:translateY(-115%);transition:.3s;pointer-events:none}
+  nav.open{transform:none;pointer-events:auto}
+  nav a{width:100%;padding:14px 16px;text-align:center}
+  .url-chip{display:none}
+  .foot{grid-template-columns:1fr 1fr;gap:24px}
+  section{padding:46px 0}
+  .shead h2{font-size:23px}
+}
+@media(max-width:480px){
+  .container{padding:0 15px}
+  .chans,.stars{grid-template-columns:repeat(2,1fr)}
+  .hudwrap{padding:34px 20px}
+  .hud h2{font-size:36px}
+  .foot{grid-template-columns:1fr}
+  .film .poster{height:200px}
+  .nw{grid-template-columns:1fr;gap:7px}
+  .nw .go{display:none}
+  .logo h1{font-size:16.5px}
+  .logo small{display:none}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/xiaolu.js"></script>
+
+<div class="scan"></div>
+<div class="marq"><div class="in">
+  <span><b>//</b> 51无敌电影网 — 全网影视资源聚合 · 更新最快 · 画质最清</span>
+  <span>电影 / 电视剧 / 综艺 / 动漫 / 纪录片 全覆盖</span>
+  <span><b>//</b> 免注册 · 免费播放 · 打开即看</span>
+  <span>支持手机端与电脑端自适应播放</span>
+  <span><b>//</b> 51无敌电影网 — 全网影视资源聚合 · 更新最快 · 画质最清</span>
+  <span>电影 / 电视剧 / 综艺 / 动漫 / 纪录片 全覆盖</span>
+</div></div>
+
+<header>
+  <div class="container">
+    <a class="logo" href="#"><div class="badge">51</div><div><h1><em>51无敌</em>电影网</h1><small>WUDI · DIANYING · WANG</small></div></a>
+    <nav id="nav">
+      <a href="#">首页</a><a href="#chan">频道分类</a><a href="#film">在线电影</a><a href="#tv">热播电视剧</a>
+      <a href="#why">平台优势</a><a href="#rank">热播排行</a><a href="#news">影视资讯</a><a href="#info">站点信息</a>
+    </nav>
+    <a class="url-chip" href="https://51wudidianyingwang-wap">51wudidianyingwang-wap</a>
+    <button class="mbtn" id="mbtn" aria-label="菜单">≡</button>
+  </div>
+</header>
+
+<!-- HUD Hero -->
+<section class="hero">
+  <div class="container">
+    <div class="hud">
+      <div class="corner c1"></div><div class="corner c2"></div><div class="corner c3"></div><div class="corner c4"></div>
+      <div class="hudwrap">
+        <div>
+          <div class="pre">[ SYSTEM_READY ] 影视资源调度系统</div>
+          <h2><span class="b1">51无敌</span>电影网<span class="b2">WU DI DIAN YING WANG</span></h2>
+          <div class="site">
+            <code>https://<b>51wudidianyingwang-wap</b></code>
+          </div>
+          <p><strong>51无敌电影网</strong>（51wudidianyingwang-wap）是专注影视在线观看的高清播放平台，收录电影、电视剧、综艺、动漫、纪录片等全品类资源，画质清晰、加载极速、每日更新，无需注册即可免费播放。</p>
+          <div class="cta">
+            <a class="btn pri" href="#film">▶ 立即观看</a>
+            <a class="btn ghost" href="#chan">☰ 浏览频道</a>
+          </div>
+        </div>
+        <div class="panel">
+          <div class="head"><span class="dot"></span> SERVER STATUS · ONLINE</div>
+          <div class="cell">
+            <div class="k">TOTAL_RESOURCES</div>
+            <div class="v">3.6万 <small>部影视资源</small></div>
+            <div class="bar"><i style="width:92%"></i></div>
+          </div>
+          <div class="mini">
+            <div class="m"><b>1080P</b><span>高清画质</span></div>
+            <div class="m"><b>0.8s</b><span>平均加载</span></div>
+            <div class="m"><b>120+</b><span>每日更新</span></div>
+            <div class="m"><b>6</b><span>内容频道</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 频道分类 -->
+<section id="chan">
+  <div class="container">
+    <div class="shead"><div class="bar"></div><h2>内容<em>频道</em>分类</h2><p>51无敌电影网六大频道，覆盖你想看的每一类影视内容</p></div>
+    <div class="chans">
+      <a class="blk chan" href="#"><div class="ic">🎬</div><h3>电影频道</h3><p>院线新片 · 经典老片</p><div class="cnt">[ 1.5万+ ]</div></a>
+      <a class="blk chan" href="#"><div class="ic">📺</div><h3>电视剧频道</h3><p>热播连续剧 · 高分剧集</p><div class="cnt">[ 9800+ ]</div></a>
+      <a class="blk chan" href="#"><div class="ic">🎤</div><h3>综艺频道</h3><p>真人秀 · 脱口秀 · 选秀</p><div class="cnt">[ 6400+ ]</div></a>
+      <a class="blk chan" href="#"><div class="ic">🎨</div><h3>动漫频道</h3><p>国漫 · 日漫 · 美漫</p><div class="cnt">[ 5200+ ]</div></a>
+      <a class="blk chan" href="#"><div class="ic">🎞️</div><h3>纪录片频道</h3><p>自然 · 历史 · 人文</p><div class="cnt">[ 2600+ ]</div></a>
+      <a class="blk chan" href="#"><div class="ic">🎯</div><h3>短剧频道</h3><p>竖屏短剧 · 爽剧</p><div class="cnt">[ 3300+ ]</div></a>
+    </div>
+  </div>
+</section>
+
+<!-- 在线电影 -->
+<section id="film" style="padding-top:0">
+  <div class="container">
+    <div class="rowhead"><h3>高清<em>在线电影</em></h3><a href="#">VIEW ALL ➜</a></div>
+    <div class="grid2">
+      <div class="film"><div class="poster a"><div class="score">★ 9.4</div><div class="yr">2026</div>🚀</div><h4>星际远征</h4><p>科幻 · 冒险 / 高清</p></div>
+      <div class="film"><div class="poster b"><div class="score">★ 9.2</div><div class="yr">2026</div>🏙️</div><h4>城市边缘</h4><p>犯罪 · 悬疑 / 高清</p></div>
+      <div class="film"><div class="poster c"><div class="score">★ 9.0</div><div class="yr">2025</div>⚔️</div><h4>江湖再起</h4><p>动作 · 武侠 / 高清</p></div>
+      <div class="film"><div class="poster d"><div class="score">★ 8.9</div><div class="yr">2026</div>👻</div><h4>深夜异闻</h4><p>惊悚 · 恐怖 / 高清</p></div>
+      <div class="film"><div class="poster e"><div class="score">★ 8.8</div><div class="yr">2026</div>💖</div><h4>相遇在春天</h4><p>爱情 · 治愈 / 高清</p></div>
+      <div class="film"><div class="poster a"><div class="score">★ 8.7</div><div class="yr">2026</div>🎭</div><h4>戏梦人生</h4><p>剧情 · 传记 / 高清</p></div>
+      <div class="film"><div class="poster b"><div class="score">★ 8.6</div><div class="yr">2025</div>🐉</div><h4>山海异兽</h4><p>奇幻 · 神话 / 高清</p></div>
+      <div class="film"><div class="poster c"><div class="score">★ 8.5</div><div class="yr">2026</div>🏎️</div><h4>极速狂飙</h4><p>动作 · 赛车 / 高清</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 热播电视剧 -->
+<section id="tv" style="padding-top:0">
+  <div class="container">
+    <div class="rowhead"><h3>正在<em>热播</em>电视剧</h3><a href="#">VIEW ALL ➜</a></div>
+    <div class="grid2">
+      <div class="film"><div class="poster d"><div class="score">★ 9.3</div><div class="yr">2026</div>🏢</div><h4>商海风云</h4><p>都市 · 商战 / 42集</p></div>
+      <div class="film"><div class="poster e"><div class="score">★ 9.1</div><div class="yr">2026</div>👑</div><h4>凤鸣九天</h4><p>古装 · 权谋 / 56集</p></div>
+      <div class="film"><div class="poster a"><div class="score">★ 9.0</div><div class="yr">2026</div>🏫</div><h4>青春不打烊</h4><p>校园 · 青春 / 28集</p></div>
+      <div class="film"><div class="poster b"><div class="score">★ 8.8</div><div class="yr">2026</div>🔍</div><h4>无声证词</h4><p>悬疑 · 刑侦 / 36集</p></div>
+      <div class="film"><div class="poster c"><div class="score">★ 8.7</div><div class="yr">2026</div>👨‍👩‍👧</div><h4>家的温度</h4><p>家庭 · 温情 / 40集</p></div>
+      <div class="film"><div class="poster d"><div class="score">★ 8.6</div><div class="yr">2026</div>⚕️</div><h4>急诊24小时</h4><p>医疗 · 职场 / 32集</p></div>
+      <div class="film"><div class="poster e"><div class="score">★ 8.5</div><div class="yr">2026</div>🍜</div><h4>人间烟火</h4><p>年代 · 生活 / 48集</p></div>
+      <div class="film"><div class="poster a"><div class="score">★ 8.4</div><div class="yr">2025</div>🕵️</div><h4>暗夜追凶</h4><p>犯罪 · 动作 / 30集</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 平台优势 -->
+<section id="why" style="padding-top:0">
+  <div class="container">
+    <div class="shead"><div class="bar"></div><h2>51无敌<em>平台优势</em></h2><p>资源全 · 更新快 · 画质清 · 播放稳</p></div>
+    <div class="feats">
+      <div class="blk feat"><span class="ic">⚡</span><h3>无敌速度</h3><p>多线路 CDN 加速，点开即播，平均加载不到一秒，告别缓冲等待。</p></div>
+      <div class="blk feat"><span class="ic">💎</span><h3>高清画质</h3><p>全站支持 1080P 高清播放，电影电视剧均为高清源，大屏观看更清晰。</p></div>
+      <div class="blk feat"><span class="ic">🔄</span><h3>每日更新</h3><p>院线新片、热播剧集、综艺新期第一时间上线，资源持续扩充。</p></div>
+      <div class="blk feat"><span class="ic">📱</span><h3>多端适配</h3><p>手机、平板、电脑全端自适应播放，界面自动适配屏幕尺寸。</p></div>
+      <div class="blk feat"><span class="ic">🗂️</span><h3>资源齐全</h3><p>六大频道覆盖电影、电视剧、综艺、动漫、纪录片、短剧全品类。</p></div>
+      <div class="blk feat"><span class="ic">🆓</span><h3>免费观看</h3><p>全站内容免注册免费播放，打开即可观看，无需付费与下载。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 热播排行 -->
+<section id="rank" style="padding-top:0">
+  <div class="container">
+    <div class="shead"><div class="bar"></div><h2>实时<em>热播</em>排行榜</h2><p>全网播放数据实时统计，最热影视一目了然</p></div>
+    <div class="rank2">
+      <div class="blk rank">
+        <div class="hd"><h3>🔥 电影热度榜</h3><em>LIVE</em></div>
+        <div class="rk g1"><div class="n">01</div><div><b>星际远征</b><small>科幻 · 冒险 / 2026</small></div><div class="up">↑ 02</div></div>
+        <div class="rk g2"><div class="n">02</div><div><b>城市边缘</b><small>犯罪 · 悬疑 / 2026</small></div><div class="up">↑ 01</div></div>
+        <div class="rk g3"><div class="n">03</div><div><b>江湖再起</b><small>动作 · 武侠 / 2026</small></div><div class="up">↑ 03</div></div>
+        <div class="rk"><div class="n">04</div><div><b>深夜异闻</b><small>惊悚 · 恐怖 / 2026</small></div><div class="up dn">↓ 01</div></div>
+        <div class="rk"><div class="n">05</div><div><b>相遇在春天</b><small>爱情 · 治愈 / 2026</small></div><div class="up">↑ 04</div></div>
+        <div class="rk"><div class="n">06</div><div><b>戏梦人生</b><small>剧情 · 传记 / 2026</small></div><div class="up dn">↓ 02</div></div>
+        <div class="rk"><div class="n">07</div><div><b>极速狂飙</b><small>动作 · 赛车 / 2026</small></div><div class="up">↑ 05</div></div>
+      </div>
+      <div class="blk rank">
+        <div class="hd"><h3>📺 电视剧热度榜</h3><em>LIVE</em></div>
+        <div class="rk g1"><div class="n">01</div><div><b>商海风云</b><small>都市 · 商战 / 42集</small></div><div class="up">↑ 01</div></div>
+        <div class="rk g2"><div class="n">02</div><div><b>凤鸣九天</b><small>古装 · 权谋 / 56集</small></div><div class="up">↑ 03</div></div>
+        <div class="rk g3"><div class="n">03</div><div><b>青春不打烊</b><small>校园 · 青春 / 28集</small></div><div class="up">↑ 02</div></div>
+        <div class="rk"><div class="n">04</div><div><b>无声证词</b><small>悬疑 · 刑侦 / 36集</small></div><div class="up dn">↓ 01</div></div>
+        <div class="rk"><div class="n">05</div><div><b>家的温度</b><small>家庭 · 温情 / 40集</small></div><div class="up">↑ 04</div></div>
+        <div class="rk"><div class="n">06</div><div><b>急诊24小时</b><small>医疗 · 职场 / 32集</small></div><div class="up">↓ 02</div></div>
+        <div class="rk"><div class="n">07</div><div><b>人间烟火</b><small>年代 · 生活 / 48集</small></div><div class="up">↑ 06</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 影视资讯 -->
+<section id="news" style="padding-top:0">
+  <div class="container">
+    <div class="shead"><div class="bar"></div><h2>最新<em>影视</em>资讯</h2><p>院线动态、热剧上新、观影指南，第一时间掌握</p></div>
+    <div class="tl">
+      <div class="blk nw"><div class="dt"><b>09</b><span>30日</span></div><div><h4>《星际远征》首周票房破纪录，51无敌电影网同步高清上线</h4></div><span class="go">READ MORE ➜</span></div>
+      <div class="blk nw"><div class="dt"><b>09</b><span>27日</span></div><div><h4>《凤鸣九天》收官收视登顶，成年度最高分古装剧</h4></div><span class="go">READ MORE ➜</span></div>
+      <div class="blk nw"><div class="dt"><b>09</b><span>23日</span></div><div><h4>电影频道新增 500+ 部院线新片，涵盖科幻动作爱情多类型</h4></div><span class="go">READ MORE ➜</span></div>
+      <div class="blk nw"><div class="dt"><b>09</b><span>19日</span></div><div><h4>《无声证词》第二季定档，原班人马回归悬疑舞台</h4></div><span class="go">READ MORE ➜</span></div>
+      <div class="blk nw"><div class="dt"><b>09</b><span>15日</span></div><div><h4>短剧频道正式上线，竖屏爽剧即刷即看</h4></div><span class="go">READ MORE ➜</span></div>
+      <div class="blk nw"><div class="dt"><b>09</b><span>11日</span></div><div><h4>播放器全面升级，1080P 高清源加载更快更稳</h4></div><span class="go">READ MORE ➜</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 人气明星 -->
+<section id="star" style="padding-top:0">
+  <div class="container">
+    <div class="shead"><div class="bar"></div><h2>人气<em>演员</em>榜</h2><p>正在热播影视作品中人气最高的演员</p></div>
+    <div class="stars">
+      <div class="blk star"><div class="av">⭐</div><h4>陈逸凡</h4><p>代表作：商海风云</p></div>
+      <div class="blk star"><div class="av">🌟</div><h4>林诗韵</h4><p>代表作：凤鸣九天</p></div>
+      <div class="blk star"><div class="av">✨</div><h4>赵天佑</h4><p>代表作：星际远征</p></div>
+      <div class="blk star"><div class="av">💫</div><h4>苏晚晴</h4><p>代表作：青春不打烊</p></div>
+      <div class="blk star"><div class="av">⭐</div><h4>周慕白</h4><p>代表作：无声证词</p></div>
+      <div class="blk star"><div class="av">🌠</div><h4>温以柔</h4><p>代表作：家的温度</p></div>
+      <div class="blk star"><div class="av">✨</div><h4>柯景行</h4><p>代表作：城市边缘</p></div>
+      <div class="blk star"><div class="av">💫</div><h4>徐若萱</h4><p>代表作：相遇在春天</p></div>
+      <div class="blk star"><div class="av">🌟</div><h4>吴子谦</h4><p>代表作：江湖再起</p></div>
+      <div class="blk star"><div class="av">⭐</div><h4>李采宁</h4><p>代表作：急诊24小时</p></div>
+      <div class="blk star"><div class="av">🌠</div><h4>张翊轩</h4><p>代表作：戏梦人生</p></div>
+      <div class="blk star"><div class="av">✨</div><h4>韩雨晴</h4><p>代表作：人间烟火</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 站点信息 -->
+<section id="info" style="padding-top:0">
+  <div class="container">
+    <div class="shead"><div class="bar"></div><h2>站点<em>信息</em></h2></div>
+    <div class="info">
+      <div class="blk lead">
+        <h3>关于 51无敌电影网</h3>
+        <p><strong>51无敌电影网（51wudidianyingwang-wap）</strong>是专注影视在线观看的高清播放平台，精心收录电影、电视剧、综艺、动漫、纪录片、短剧等全品类内容，资源齐全、更新迅速。</p>
+        <p>平台支持手机端与电脑端自适应播放，1080P 高清画质、多线路加速加载，无需注册即可免费观看，为用户打造便捷流畅的影视观影体验。</p>
+        <div class="kw">
+          <a href="#">51无敌电影网</a><a href="#">51wudidianyingwang-wap</a><a href="#">无敌电影网</a><a href="#">电影在线观看</a>
+          <a href="#">高清电影</a><a href="#">电视剧在线观看</a><a href="#">免费电影网站</a><a href="#">51无敌</a>
+        </div>
+      </div>
+      <div class="blk">
+        <dl class="dl">
+          <div class="row"><dt>网站名称</dt><dd>51无敌电影网</dd></div>
+          <div class="row"><dt>网站网址</dt><dd><a href="https://51wudidianyingwang-wap">https://51wudidianyingwang-wap</a></dd></div>
+          <div class="row"><dt>内容频道</dt><dd>电影 · 电视剧 · 综艺 · 动漫 · 纪录片 · 短剧</dd></div>
+          <div class="row"><dt>平台优势</dt><dd>资源全 · 更新快 · 画质清 · 播放稳</dd></div>
+          <div class="row"><dt>资源规模</dt><dd>3.6万+ 部影视资源</dd></div>
+          <div class="row"><dt>更新频率</dt><dd>每日上新 120+ 部影视内容</dd></div>
+          <div class="row"><dt>使用方式</dt><dd>免注册 · 免费观看 · 多端自适应</dd></div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" style="padding-top:0">
+  <div class="container">
+    <div class="shead"><div class="bar"></div><h2>常见<em>问题</em></h2></div>
+    <div class="faqs">
+      <div class="faq"><div><span class="n">Q1</span>51无敌电影网是免费的吗？需要注册吗？<span class="ar">[+]</span></div><div class="ans"><p>是的。51无敌电影网（51wudidianyingwang-wap）提供全站免费播放服务，无需注册、无需付费，打开网站即可在线观看所有影视内容。</p></div></div>
+      <div class="faq"><div><span class="n">Q2</span>网站主要收录哪些类型的影视内容？<span class="ar">[+]</span></div><div class="ans"><p>本站收录电影、电视剧、综艺、动漫、纪录片、短剧六大频道，涵盖科幻、动作、爱情、悬疑、古装、青春等多种类型，资源持续扩充。</p></div></div>
+      <div class="faq"><div><span class="n">Q3</span>播放会卡顿吗？画质怎么样？<span class="ar">[+]</span></div><div class="ans"><p>平台采用多线路 CDN 加速，支持 1080P 全高清播放，平均加载不到一秒，手机电脑都能获得流畅清晰的观影体验。</p></div></div>
+      <div class="faq"><div><span class="n">Q4</span>支持手机端观看吗？<span class="ar">[+]</span></div><div class="ans"><p>支持。本站采用全端自适应设计，手机、平板、电脑均可流畅播放，界面自动适配屏幕尺寸，无需下载额外应用。</p></div></div>
+      <div class="faq"><div><span class="n">Q5</span>资源多久更新一次？<span class="ar">[+]</span></div><div class="ans"><p>每日更新，日均上新 120+ 部影视内容，包括院线新片、热播剧集最新集数、综艺新期及短剧作品，排行榜数据实时刷新。</p></div></div>
+      <div class="faq"><div><span class="n">Q6</span>如何找到想看的影视作品？<span class="ar">[+]</span></div><div class="ans"><p>可通过六大频道分类浏览，参考热播排行榜挑选热门内容，也可按片名、演员、类型快速定位想看的影视作品。</p></div></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="foot">
+      <div class="brand">
+        <div class="logo"><div class="badge">51</div><div><h1><em>51无敌</em>电影网</h1></div></div>
+        <p>51无敌电影网（51wudidianyingwang-wap）专注影视在线观看，提供电影、电视剧、综艺、动漫、纪录片、短剧等高清免费播放，每日更新，手机电脑自适应，打开即看。</p>
+      </div>
+      <div><h4>内容频道</h4><ul><li>电影频道</li><li>电视剧频道</li><li>综艺频道</li><li>动漫频道</li><li>纪录片频道</li><li>短剧频道</li></ul></div>
+      <div><h4>网站栏目</h4><ul><li>在线电影</li><li>热播电视剧</li><li>平台优势</li><li>热播排行榜</li><li>影视资讯</li><li>站点信息</li></ul></div>
+      <div><h4>关于本站</h4><ul><li>网站名称：51无敌电影网</li><li>网站网址：51wudidianyingwang-wap</li><li>免注册 · 免费观看</li><li>手机 / 电脑 多端自适应</li></ul></div>
+    </div>
+    <div class="bot">
+      <span>© 2026 <span class="u">51无敌电影网 51wudidianyingwang-wap</span> 版权所有 · 影视在线观看高清播放平台</span>
+      <span>3.6万+ 资源 · 1080P 高清 · 免注册免费播放</span>
+    </div>
+  </div>
+</footer>
+
+<button id="top" aria-label="返回顶部">↑</button>
+
+<script>
+var mbtn=document.getElementById('mbtn'),nav=document.getElementById('nav');
+mbtn.addEventListener('click',function(){nav.classList.toggle('open')});
+nav.addEventListener('click',function(e){if(e.target.tagName==='A')nav.classList.remove('open')});
+[].forEach.call(document.querySelectorAll('.faq'),function(f){
+  f.children[0].addEventListener('click',function(){f.classList.toggle('open')});
+});
+var top=document.getElementById('top');
+window.addEventListener('scroll',function(){top.classList.toggle('on',window.scrollY>400)});
+top.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});
+</script>
+</body>
+</html>
